@@ -1,0 +1,285 @@
+{
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "version": "",
+        "corpus": "",
+        "annotation_tools": "",
+        "annotation_rules": "",
+        "validation": "",
+        "data_source": ""
+      },
+      "namespace": "scaper",
+      "data": [
+        {
+          "time": 0.0,
+          "duration": 10.0,
+          "value": {
+            "label": "noise",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/background/noise/brownian.wav",
+            "source_time": 0,
+            "event_time": 0,
+            "event_duration": 10.0,
+            "snr": 0,
+            "role": "background",
+            "pitch_shift": null,
+            "time_stretch": null
+          },
+          "confidence": 1.0
+        },
+        {
+          "time": 2.4113880209211036,
+          "duration": 2.5745838123292,
+          "value": {
+            "label": "dog_bark",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/dog_bark/79584-3-1-2.wav",
+            "source_time": 0.0,
+            "event_time": 2.4113880209211036,
+            "event_duration": 2.2457698445319787,
+            "snr": 10.810047090712047,
+            "role": "foreground",
+            "pitch_shift": -0.3212587575763459,
+            "time_stretch": 1.1464148112050843
+          },
+          "confidence": 1.0
+        },
+        {
+          "time": 5.983872963731249,
+          "duration": 1.5317804075730228,
+          "value": {
+            "label": "speech",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/speech/speech383-2.wav",
+            "source_time": 0.0,
+            "event_time": 5.983872963731249,
+            "event_duration": 1.7758544570948085,
+            "snr": 20.42044343887606,
+            "role": "foreground",
+            "pitch_shift": -2.917669440697413,
+            "time_stretch": 0.862559654848587
+          },
+          "confidence": 1.0
+        },
+        {
+          "time": 7.074575402034753,
+          "duration": 2.9254245979652462,
+          "value": {
+            "label": "engine_idling",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/engine_idling/187075-5-0-2.wav",
+            "source_time": 0.0,
+            "event_time": 7.074575402034753,
+            "event_duration": 3.056325774634796,
+            "snr": 10.104309591246945,
+            "role": "foreground",
+            "pitch_shift": 0.29561369469128707,
+            "time_stretch": 0.9571704110353906
+          },
+          "confidence": 1.0
+        }
+      ],
+      "sandbox": {
+        "scaper": {
+          "duration": 10.0,
+          "fg_path": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/",
+          "bg_path": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/background/",
+          "fg_spec": [
+            [
+              [
+                "choose",
+                []
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0.0
+              ],
+              [
+                "uniform",
+                0.0,
+                10.0
+              ],
+              [
+                "uniform",
+                0.5,
+                4.0
+              ],
+              [
+                "uniform",
+                6,
+                30
+              ],
+              "foreground",
+              [
+                "uniform",
+                -3.0,
+                3.0
+              ],
+              [
+                "uniform",
+                0.8,
+                1.2
+              ]
+            ],
+            [
+              [
+                "choose",
+                []
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0.0
+              ],
+              [
+                "uniform",
+                0.0,
+                10.0
+              ],
+              [
+                "uniform",
+                0.5,
+                4.0
+              ],
+              [
+                "uniform",
+                6,
+                30
+              ],
+              "foreground",
+              [
+                "uniform",
+                -3.0,
+                3.0
+              ],
+              [
+                "uniform",
+                0.8,
+                1.2
+              ]
+            ],
+            [
+              [
+                "choose",
+                []
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0.0
+              ],
+              [
+                "uniform",
+                0.0,
+                10.0
+              ],
+              [
+                "uniform",
+                0.5,
+                4.0
+              ],
+              [
+                "uniform",
+                6,
+                30
+              ],
+              "foreground",
+              [
+                "uniform",
+                -3.0,
+                3.0
+              ],
+              [
+                "uniform",
+                0.8,
+                1.2
+              ]
+            ]
+          ],
+          "bg_spec": [
+            [
+              [
+                "const",
+                "noise"
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0
+              ],
+              [
+                "const",
+                0
+              ],
+              [
+                "const",
+                10.0
+              ],
+              [
+                "const",
+                0
+              ],
+              "background",
+              null,
+              null
+            ]
+          ],
+          "fg_labels": [
+            "air_conditioner",
+            "car_horn",
+            "dog_bark",
+            "drilling",
+            "engine_idling",
+            "gun_shot",
+            "jackhammer",
+            "siren",
+            "speech",
+            "street_music"
+          ],
+          "bg_labels": [
+            "noise"
+          ],
+          "protected_labels": [],
+          "sr": 44100,
+          "ref_db": -50,
+          "n_channels": 1,
+          "fade_in_len": 0.01,
+          "fade_out_len": 0.01,
+          "n_events": 3,
+          "polyphony_max": 2,
+          "polyphony_gini": 0.620745218801108,
+          "allow_repeated_label": true,
+          "allow_repeated_source": false,
+          "reverb": 0.1,
+          "scaper_version": "1.0.3"
+        }
+      },
+      "time": 0,
+      "duration": 10.0
+    }
+  ],
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "release": "",
+    "duration": 10.0,
+    "identifiers": {},
+    "jams_version": "0.3.3"
+  },
+  "sandbox": {}
+}

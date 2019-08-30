@@ -1,0 +1,173 @@
+{
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "version": "",
+        "corpus": "",
+        "annotation_tools": "",
+        "annotation_rules": "",
+        "validation": "",
+        "data_source": ""
+      },
+      "namespace": "scaper",
+      "data": [
+        {
+          "time": 0.0,
+          "duration": 10.0,
+          "value": {
+            "label": "noise",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/background/noise/brownian.wav",
+            "source_time": 0,
+            "event_time": 0,
+            "event_duration": 10.0,
+            "snr": 0,
+            "role": "background",
+            "pitch_shift": null,
+            "time_stretch": null
+          },
+          "confidence": 1.0
+        },
+        {
+          "time": 3.683030432844834,
+          "duration": 2.434737387229198,
+          "value": {
+            "label": "dog_bark",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/dog_bark/30344-3-0-1.wav",
+            "source_time": 0.0,
+            "event_time": 3.683030432844834,
+            "event_duration": 2.3869554252953558,
+            "snr": 16.582185017531973,
+            "role": "foreground",
+            "pitch_shift": 2.295748394847526,
+            "time_stretch": 1.020017953174777
+          },
+          "confidence": 1.0
+        }
+      ],
+      "sandbox": {
+        "scaper": {
+          "duration": 10.0,
+          "fg_path": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/",
+          "bg_path": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/background/",
+          "fg_spec": [
+            [
+              [
+                "choose",
+                []
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0.0
+              ],
+              [
+                "uniform",
+                0.0,
+                10.0
+              ],
+              [
+                "uniform",
+                0.5,
+                4.0
+              ],
+              [
+                "uniform",
+                6,
+                30
+              ],
+              "foreground",
+              [
+                "uniform",
+                -3.0,
+                3.0
+              ],
+              [
+                "uniform",
+                0.8,
+                1.2
+              ]
+            ]
+          ],
+          "bg_spec": [
+            [
+              [
+                "const",
+                "noise"
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0
+              ],
+              [
+                "const",
+                0
+              ],
+              [
+                "const",
+                10.0
+              ],
+              [
+                "const",
+                0
+              ],
+              "background",
+              null,
+              null
+            ]
+          ],
+          "fg_labels": [
+            "air_conditioner",
+            "car_horn",
+            "dog_bark",
+            "drilling",
+            "engine_idling",
+            "gun_shot",
+            "jackhammer",
+            "siren",
+            "speech",
+            "street_music"
+          ],
+          "bg_labels": [
+            "noise"
+          ],
+          "protected_labels": [],
+          "sr": 44100,
+          "ref_db": -50,
+          "n_channels": 1,
+          "fade_in_len": 0.01,
+          "fade_out_len": 0.01,
+          "n_events": 1,
+          "polyphony_max": 1,
+          "polyphony_gini": 0.2440030983479573,
+          "allow_repeated_label": true,
+          "allow_repeated_source": false,
+          "reverb": 0.1,
+          "scaper_version": "1.0.3"
+        }
+      },
+      "time": 0,
+      "duration": 10.0
+    }
+  ],
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "release": "",
+    "duration": 10.0,
+    "identifiers": {},
+    "jams_version": "0.3.3"
+  },
+  "sandbox": {}
+}

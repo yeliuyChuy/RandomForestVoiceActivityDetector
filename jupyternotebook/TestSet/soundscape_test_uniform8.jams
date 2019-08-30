@@ -1,0 +1,229 @@
+{
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "version": "",
+        "corpus": "",
+        "annotation_tools": "",
+        "annotation_rules": "",
+        "validation": "",
+        "data_source": ""
+      },
+      "namespace": "scaper",
+      "data": [
+        {
+          "time": 0.0,
+          "duration": 10.0,
+          "value": {
+            "label": "noise",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/background/noise/brownian.wav",
+            "source_time": 0,
+            "event_time": 0,
+            "event_duration": 10.0,
+            "snr": 0,
+            "role": "background",
+            "pitch_shift": null,
+            "time_stretch": null
+          },
+          "confidence": 1.0
+        },
+        {
+          "time": 4.1206120176534515,
+          "duration": 0.8322609727097873,
+          "value": {
+            "label": "gun_shot",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/gun_shot/200460-6-0-0.wav",
+            "source_time": 0.0,
+            "event_time": 4.1206120176534515,
+            "event_duration": 0.9406741847408833,
+            "snr": 13.917239339844137,
+            "role": "foreground",
+            "pitch_shift": -0.02394558968954641,
+            "time_stretch": 0.8847494554546967
+          },
+          "confidence": 1.0
+        },
+        {
+          "time": 7.0655085695276405,
+          "duration": 2.934491430472359,
+          "value": {
+            "label": "engine_idling",
+            "source_file": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/engine_idling/39856-5-0-10.wav",
+            "source_time": 0.0,
+            "event_time": 7.0655085695276405,
+            "event_duration": 2.7431790260540945,
+            "snr": 19.405673857685493,
+            "role": "foreground",
+            "pitch_shift": 2.9309410479521656,
+            "time_stretch": 1.0697411297626669
+          },
+          "confidence": 1.0
+        }
+      ],
+      "sandbox": {
+        "scaper": {
+          "duration": 10.0,
+          "fg_path": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/foreground/",
+          "bg_path": "/Users/anderson675/Documents/Thesis/scripts/build/1_Dataset_Generate/audio/soundbanks/test/background/",
+          "fg_spec": [
+            [
+              [
+                "choose",
+                []
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0.0
+              ],
+              [
+                "uniform",
+                0.0,
+                10.0
+              ],
+              [
+                "uniform",
+                0.5,
+                4.0
+              ],
+              [
+                "uniform",
+                6,
+                30
+              ],
+              "foreground",
+              [
+                "uniform",
+                -3.0,
+                3.0
+              ],
+              [
+                "uniform",
+                0.8,
+                1.2
+              ]
+            ],
+            [
+              [
+                "choose",
+                []
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0.0
+              ],
+              [
+                "uniform",
+                0.0,
+                10.0
+              ],
+              [
+                "uniform",
+                0.5,
+                4.0
+              ],
+              [
+                "uniform",
+                6,
+                30
+              ],
+              "foreground",
+              [
+                "uniform",
+                -3.0,
+                3.0
+              ],
+              [
+                "uniform",
+                0.8,
+                1.2
+              ]
+            ]
+          ],
+          "bg_spec": [
+            [
+              [
+                "const",
+                "noise"
+              ],
+              [
+                "choose",
+                []
+              ],
+              [
+                "const",
+                0
+              ],
+              [
+                "const",
+                0
+              ],
+              [
+                "const",
+                10.0
+              ],
+              [
+                "const",
+                0
+              ],
+              "background",
+              null,
+              null
+            ]
+          ],
+          "fg_labels": [
+            "air_conditioner",
+            "car_horn",
+            "dog_bark",
+            "drilling",
+            "engine_idling",
+            "gun_shot",
+            "jackhammer",
+            "siren",
+            "speech",
+            "street_music"
+          ],
+          "bg_labels": [
+            "noise"
+          ],
+          "protected_labels": [],
+          "sr": 44100,
+          "ref_db": -50,
+          "n_channels": 1,
+          "fade_in_len": 0.01,
+          "fade_out_len": 0.01,
+          "n_events": 2,
+          "polyphony_max": 1,
+          "polyphony_gini": 0.37600165957005416,
+          "allow_repeated_label": true,
+          "allow_repeated_source": false,
+          "reverb": 0.1,
+          "scaper_version": "1.0.3"
+        }
+      },
+      "time": 0,
+      "duration": 10.0
+    }
+  ],
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "release": "",
+    "duration": 10.0,
+    "identifiers": {},
+    "jams_version": "0.3.3"
+  },
+  "sandbox": {}
+}
