@@ -14,7 +14,7 @@ This project consists of 5 stages as:
 Step.0 was performed due to the lack of the off-the-shelf data set, in which the [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html) and [Mozilla Common Voice](https://voice.mozilla.org/en) were used to create our synthetic urban soundscape data.
 
 Step.1 is the frontend processing that turns raw audio data into concise but logical representation. In this research, the Per-Channel Energy Normalization(PCEN)([Wang et al., 2017](https://arxiv.org/pdf/1607.05666.pdf),[Lostanlen
-et al., 2018]](http://www.justinsalamon.com/uploads/4/3/9/4/4394963/lostanlen_pcen_spl2018.pdf)) was tested with a promising result even better than Mel Frequency Cepstral Coefficents (MFCCs), especially in the condition of low signal-noise-ratio(SNR).
+et al., 2018](http://www.justinsalamon.com/uploads/4/3/9/4/4394963/lostanlen_pcen_spl2018.pdf) was tested with a promising result even better than Mel Frequency Cepstral Coefficents (MFCCs), especially in the condition of low signal-noise-ratio(SNR).
 
 Step.2 is the procedure of selecting a statistical model. Since we've already determined to used Random Forest Classifier, this step only contains metric selection, hyperparameter optimization through grid-search cross-validation.
 
