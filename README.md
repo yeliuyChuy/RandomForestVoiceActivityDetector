@@ -10,6 +10,8 @@ In order to remove the distractions, we could translate this problem to the task
 
 ## Install
 
-(In case of no data set available) For synthesizing urban soundscape data:
-
-1. scaper
+1. In case of no data set available, some data and tools offered here for synthesizing urban soundscape data:
+- [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html) by [@justinsalamon](https://github.com/justinsalamon), which contains 8732 labeled sound excerpts (<=4s) of urban sounds from 10 classes: air_conditioner, car_horn, children_playing, dog_bark, drilling, enginge_idling, gun_shot, jackhammer, siren, and street_music.
+- [Mozilla Common Voice](https://voice.mozilla.org/en), a crowdsourcing project started by Mozilla to create a free database for speech recognition software.
+- [scaper](https://github.com/justinsalamon/scaper) by [@justinsalamon](https://github.com/justinsalamon), A library for soundscape synthesis and augmentation.
+- [UrbanSound-SED](http://urbansed.weebly.com/) by [@justinsalamon](https://github.com/justinsalamon),a example dataset of 10,000 synthetic soundscapes with sound event annotations generated using scaper
