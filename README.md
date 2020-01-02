@@ -1,1 +1,2 @@
 # RandomForestVoiceActivityDetector
+Voice Activity Detection(VAD) distinguishes the speech segments from the non-speech contents in the audio, which is implemented in many speech-related applications such as speech coding, transmission and recognition. This enabling function is also challanged by the complicated auditory environment in the real-world: low signal-noise ratio or various acoustic events in metropolitan environment would interfere with the progress of VAD working.  
