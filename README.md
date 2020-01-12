@@ -67,10 +67,7 @@ IR Convolution | Isophonics Room Impulse Response Data Set: Great Hall sample IR
 
 
 Step.4 models the occurrence of speech and non-speech by Hidden-Markov-Model, and find its most likely states sequence through Viterbi Decoding in order to smooth the snatchy decisions by classifier. The viterbi path was computed as:
-![Computing Viterbi path]
-(https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/ViterbiPath.jpeg)
+![Computing Viterbi path](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/ViterbiPath.jpeg)
 
-And the balanced accuracy through each stage performed as:
-![BACC Improvement]
-(https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/BACC_Improvement.png)
-
+And we could see the robustness improvement through each stage performed as:
+![BACC Improvement](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/BACC_Improvement.png)
