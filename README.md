@@ -41,11 +41,29 @@ This project consists of 5 stages as:
 
 Step.0 was performed due to the lack of the off-the-shelf data set, in which the [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html) and [Mozilla Common Voice](https://voice.mozilla.org/en) were used to create our synthetic urban soundscape data.
 
+![Statistic of Synthetic Train Set](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/soundscape_statistic_train.png)
+
 Step.1 is the frontend processing that turns raw audio data into concise but logical representation. In this research, the Per-Channel Energy Normalization(PCEN)([Wang et al., 2017](https://arxiv.org/pdf/1607.05666.pdf),[Lostanlen
 et al., 2018](http://www.justinsalamon.com/uploads/4/3/9/4/4394963/lostanlen_pcen_spl2018.pdf) was tested with a promising result even better than Mel Frequency Cepstral Coefficents (MFCCs), especially in the condition of low signal-noise-ratio(SNR).
 
 Step.2 is the procedure of selecting a statistical model. Since we've already determined to used Random Forest Classifier, this step only contains metric selection, hyperparameter optimization through grid-search cross-validation.
 
+A comparison of two feature extraction algorithms was conducted, and the result of balanced accuracy shows PCEN is promising for speech with lower signal-noise ratio:
+
+![MFCC vs. PCEN in Frontend Processing](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/ModelPerformance_BACC.png)
+
 Step.3 is for improving the robustness of our model by fitting the model to more degraded data and evaluated on the unmodified example. For audio-related data augmentation, deformations such as pitch shift, time stretch, colored noise, dynamic range compression, and IR convolution would effective and their open-source implementations are available in [muda](https://github.com/bmcfee/muda)
+
+Deformation | Parameters Setting
+------------ | -------------
+Random Pitch Shifting | Pitch ∼ N(μ=0,σ^2 =1)
+Random Time Stretching | ln(Rate) ∼ N(μ = 0, σ = 0.3)
+Colored Noise | Brownian Noise ∈ (Min Weight = 0.1, Max Weight = 0.9)
+Dynamic Compression | Dolby E standards: speech
+IR Convolution | Isophonics Room Impulse Response Data Set: Great Hall sample IR
+
+![MFCC vs. PCEN in Frontend Processing](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/Aug_BACC_BarPlot.png)
+(Please ignore the result of IR convolution due to the distribution gap in deformed train set, which will be fixed and updated later)
+
 
 Step.4 models the occurrence of speech and non-speech by Hidden-Markov-Model, and find its most likely states sequence through Viterbi Decoding in order to smooth the snatchy decisions by classifier.
