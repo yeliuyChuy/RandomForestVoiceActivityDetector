@@ -44,7 +44,7 @@ Step.0 was performed due to the lack of the off-the-shelf data set, in which the
 ![Statistic of Synthetic Train Set](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/soundscape_statistic_train.png)
 
 Step.1 is the frontend processing that turns raw audio data into concise but logical representation. In this research, the Per-Channel Energy Normalization(PCEN)([Wang et al., 2017](https://arxiv.org/pdf/1607.05666.pdf),[Lostanlen
-et al., 2018](http://www.justinsalamon.com/uploads/4/3/9/4/4394963/lostanlen_pcen_spl2018.pdf) was tested with a promising result even better than Mel Frequency Cepstral Coefficents (MFCCs), especially in the condition of low signal-noise-ratio(SNR).
+et al., 2018](http://www.justinsalamon.com/uploads/4/3/9/4/4394963/lostanlen_pcen_spl2018.pdf)) was tested with a promising result even better than Mel Frequency Cepstral Coefficents (MFCCs), especially in the condition of low signal-noise-ratio(SNR).
 
 Step.2 is the procedure of selecting a statistical model. Since we've already determined to used Random Forest Classifier, this step only contains metric selection, hyperparameter optimization through grid-search cross-validation.
 
@@ -62,8 +62,15 @@ Colored Noise | Brownian Noise ∈ (Min Weight = 0.1, Max Weight = 0.9)
 Dynamic Compression | Dolby E standards: speech
 IR Convolution | Isophonics Room Impulse Response Data Set: Great Hall sample IR
 
-![MFCC vs. PCEN in Frontend Processing](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/Aug_BACC_BarPlot.png)
+![Data Augmentation](https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/Aug_BACC_BarPlot.png)
 (Please ignore the result of IR convolution due to the distribution gap in deformed train set, which will be fixed and updated later)
 
 
-Step.4 models the occurrence of speech and non-speech by Hidden-Markov-Model, and find its most likely states sequence through Viterbi Decoding in order to smooth the snatchy decisions by classifier.
+Step.4 models the occurrence of speech and non-speech by Hidden-Markov-Model, and find its most likely states sequence through Viterbi Decoding in order to smooth the snatchy decisions by classifier. The viterbi path was computed as:
+![Computing Viterbi path]
+(https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/ViterbiPath.jpeg)
+
+And the balanced accuracy through each stage performed as:
+![BACC Improvement]
+(https://github.com/yeliuyChuy/RandomForestVoiceActivityDetector/blob/master/pics/BACC_Improvement.png)
+
